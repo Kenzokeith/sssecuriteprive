@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SSPIAS – Infos et Conseils</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+        /* Réinitialisation et styles de base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      color: #333;
+      line-height: 1.6;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: auto;
+    }
+    /* En-tête */
+    header {
+      background: #b71c1c; /* Rouge profond évoquant l'incendie */
+      color: #fff;
+      padding: 20px 0;
+    }
+    header .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    header h1 {
+      font-size: 2em;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: #ffcc00;
+    }
+    /* Section Hero */
+    .hero {
+      background: url('images/incendie-hero.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      color: #fff;
+      text-align: center;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-content h2 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+    .hero-content p {
+      font-size: 1.2em;
+    }
+    /* Contenu Principal */
+    .content {
+      padding: 40px 20px;
+    }
+    .content h2 {
+      font-size: 2em;
+      color: #b71c1c;
+      margin-bottom: 20px;
+    }
+    .content section {
+      margin-bottom: 40px;
+    }
+    .content section p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    .content section img {
+      max-width: 100%;
+      border-radius: 8px;
+      margin: 20px 0;
+    }
+    /* Section FAQ / Infos complémentaires */
+    .faq {
+      background: #f5f5f5;
+      padding: 20px;
+      border-radius: 8px;
+    }
+    .faq h3 {
+      margin-top: 15px;
+      color: #b71c1c;
+    }
+    /* Section Contact */
+    .contact {
+      background: #eeeeee;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    .contact h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #b71c1c;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+    }
+    .contact form input,
+    .contact form textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    .contact form button {
+      background: #b71c1c;
+      color: #fff;
+      padding: 12px;
+      border: none;
+      border-radius: 4px;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+    .contact form button:hover {
+      background: #d32f2f;
+    }
+    /* Pied de page */
+    footer {
+      background: #333;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9em;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <div class="container header-container">
+      <h1><img src="image/SSSIP.png" alt="logo de l'entreprise" height="150" width="150"></h1>
+      <nav>
+        <ul>
+          <li><a href="index.html.html">Accueil</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Section Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>SAMUEL SEA PREVENTION INCENDIE ASSISTANCE SECOURS (SSPIAS)</h2>
+      <p>Solutions complètes pour la prévention et la gestion des risques incendie</p>
+    </div>
+  </section>
+  
+  <!-- Contenu Principal -->
+  <main class="container content">
+    <!-- Présentation -->
+    <section>
+      <h2>Présentation</h2>
+      <p>Notre département incendie propose des solutions dédiées à la prévention, la détection et l'intervention pour protéger vos locaux ainsi que vos collaborateurs contre les risques d'incendie.</p>
+      <img src="image/imge.jpeg" alt="Présentation du volet incendie" width="500" height="500">
+    </section>
+    
+    <!-- Prévention Incendie -->
+    <section>
+
+      <h2>Prévention Incendie</h2>
+      <p>Nous mettons en place des systèmes de détection et de suppression des incendies, et réalisons des audits et diagnostics pour identifier les potentiels risques. Nos experts vous conseillent sur l'optimisation des dispositifs de sécurité incendie et la conformité aux normes en vigueur.</p>
+      <img src="image/R.jfif" alt="Système de prévention incendie" width="360" height="360">
+      <img src="image/qsqs.jfif" alt="Système de prévention incendie" width="360" height="360">
+    </section>
+    
+    <!-- Intervention et Formation -->
+    <section>
+      <h2>Intervention et Formation</h2>
+      <p>En cas d'urgence, notre équipe d'intervention est formée pour réagir rapidement et efficacement afin de minimiser les dégâts. Par ailleurs, nous organisons des sessions de formation et des exercices d'évacuation pour préparer vos équipes aux situations d'urgence.</p>
+      <img src="image/img sspias.jpeg" alt="Intervention en cas d'incendie" width="360" height="520">
+      <img src="image/sspias3.jpeg" alt="Intervention en cas d'incendie" width="630" height="360">
+                </section>
+    
+    <!-- Équipements et Maintenance -->
+    <section>
+      <h2>Équipements et Maintenance</h2>
+      <p>Nous fournissons et entretenons une gamme complète d'équipements (extincteurs, détecteurs automatiques, systèmes d'alarme) répondant aux normes NFPA, ISO, et aux standards locaux, garantissant ainsi leur fonctionnement optimal en toute circonstance.</p>
+      <img src="image/initiation_a_la_maintenance_des_equipements_de_securite_incendie.jpg" alt="Maintenance des équipements incendie" width="460" height="360">
+      <img src="image/fsfsqq.jfif " alt="Maintenance des équipements incendie" width="460" height="360">
+    </section>
+    
+    <!-- FAQ / Informations Complémentaires -->
+    <section class="faq">
+      <h2>Informations Complémentaires</h2>
+      <h3>Normes et Réglementations</h3>
+      <p>Nos installations respectent les normes en vigueur et les recommandations des organismes tels que la NFPA et l'ISO pour assurer votre sécurité.</p>
+      
+      <h3>Audit et Conseils Personnalisés</h3>
+      <p>Nous réalisons des audits détaillés et proposons des solutions personnalisées pour améliorer continuellement votre sécurité incendie.</p>
+      
+      <h3>Assistance 24/7</h3>
+      <p>Notre service d'assistance est disponible à toute heure pour répondre à vos questions et intervenir en cas d'urgence.</p>
+    </section>
+  </main>
+  
+  <!-- Section Contact -->
+  <section class="contact">
+    <section id="contact" class="advice">
+    <div class="container">
+      <h2>Contactez-Nous</h2>
+      <p>Pour toute demande d'information ou une intervention, n'hésitez pas à nous contacter via le formulaire ci-dessous :</p>
+      <form action="#" method="post">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+  
+  <!-- Pied de page -->
+  <footer>
+    <div class="container">
+      <p>Sarl au capital de 15 000 000 FCFA - N°RCCM-CI-ABJ-03-2022-B13-07317-N°CC:2243258 R
+N° Agrément: N°0222/MIS/ONPC du 12 FEV 2025 - N°COMPTE BANCAIRE:25121800 A070093601
+Siège social: Bingerville, Cité Marina, non loin de la Pharmacie Marina- BP Bingerville 
+Tel: 27 24 36 22 08 - 27 24 36 22 09 - 27 24 36 22 10 - Cel: 07 05 82 86 95
+Email: ss.securiteincendie@gmail.com - succursale de Sécurit sécurité privée
+Rue Cantelaudette 333100 Lormont France RCS BORDEAUX
+N°Agrément: 093-2025-12-28-20200769307 WEB: www.ss-securite-priivee.com
+</p>
+      <p>&copy; 2025 SSPIAS. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

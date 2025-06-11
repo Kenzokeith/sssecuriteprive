@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SS-SECURITE PRIVEE – Infos et Conseils</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- En-tête -->
+  <header>
+    <style>
+        /* Réinitialisation et réglages de base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #ffcc00;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Conteneur central */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* En-tête et navigation */
+header {
+  background-color: #1B263B;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #FFB703;
+}
+
+/* Section Hero */
+.hero {
+  background: url('images/securite-hero.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.hero-content h2 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #FFB703;
+  color: #1B263B;
+  padding: 10px 20px;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #FFA000;
+}
+
+/* Section Conseils */
+.advice {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.advice h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #1B263B;
+}
+
+.tips-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.tip {
+  background-color: #F9F9F9;
+  padding: 20px;
+  max-width: 350px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.tip:hover {
+  transform: translateY(-5px);
+}
+
+.tip h3 {
+  margin-bottom: 10px;
+  color: #1B263B;
+}
+
+/* Section Informations */
+.information {
+  padding: 60px 0;
+  background-color: #E9ECEF;
+}
+
+.information h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2em;
+  color: #1B263B;
+}
+
+.news {
+  background-color: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.news h3 {
+  color: #1B263B;
+  margin-bottom: 10px;
+}
+
+/* Section Contact */
+.contact {
+  padding: 60px 0;
+  background-color: #fff;
+}
+
+.contact h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1B263B;
+}
+
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact form input,
+.contact form textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #CCC;
+  border-radius: 4px;
+}
+
+.contact form button {
+  background-color: #FFB703;
+  color: #1B263B;
+  padding: 10px;
+  border: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.contact form button:hover {
+  background-color: #FFA000;
+}
+
+/* Pied de page */
+footer {
+  background-color: #1B263B;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+    </style>
+    <div class="container header-container">
+      <div class="logo"><img src="image/Sans titre1.png" alt="Logo de l'entreprise SS SECURITE PRIVEE"width="150" height="150"></div>
+      <h1>SEA SAMUEL SECURITE PRIVEE (SSSP)</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html.html">Accueil</a></li>
+          <li><a href="#conseils">Services</a></li>
+          <li><a href="#infos">Infos</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="Apropos de nous.html">A propos de nous</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+  <!-- Section Conseils de Sécurité -->
+   <div class="carousel">
+  <img src="image/vigile.jpeg" alt="Système de contrôle"height="300" width="500">>
+  <img src="image/1.jpeg" alt="Système de contrôle"height="300" width="500">>
+  <img src="image/vigiles.jpeg" alt="Équipe Volé Sécurité" height="300" width="300">
+  <img src="image/vigil.jpeg" alt="Intervention en cours" height="300" width="500">>
+  <img src="image/3.jpeg" alt="Système de contrôle"height="300" width="500">>
+  <img src="image/2.jpeg" alt="Système de contrôle"height="300" width="500">>
+    <style>
+    .carousel {
+  display: flex;
+  overflow-x: scroll;
+  gap: 20px;
+}
+
+.carousel img {
+  width: 300px;
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.carousel img:hover {
+  transform: scale(1.05);
+}
+
+  </style>
+</div>
+  <!-- Section d'Accueil -->
+  <section id="accueil" class="hero">*
+    <div class="hero-content">
+      <h1>PROTEGEZ VOUS AU QUOTIDIEN</h1>
+      <p>Découvrez notre variété de prestation de services agréables pour tous vos besoins en matière de sécurité.</p>
+      <a href="#services" class="btn">Voir nos services</a>
+    </div>
+  </section>
+
+  <section id="conseils" class="advice">
+    <div class="container">
+      <h2><section class="services" id="services"></a>NOS SERVICES</h2>
+      <div class="tips-grid">
+        <div class="tip">
+          <h3>VIGILES SIMPLES OU ARMEES (GARDIENNAGE)</h3>
+          <p>Les vigiles agents de sécurité jouent un rôle crucial dans la protection des biens et des personnes dans divers environnements, tels que les discothèques, les magasins, les événements et les immeubles.</p>
+        </div>
+        <div class="tip">
+          <h3>PROTECTION</h3>
+          <p>L' agent de sécurité garantit la sécurité des personnes et propriétés dans des contextes publics et privés : il exerce des actions de prévention des délits et illicites.</p>
+        </div>
+                <div class="tip">
+          <h3>INTERVENTION</h3>
+          <p>L’intervenant en sécurité est responsable de la mise en œuvre de mesures de prévention et de protection au sein d’organisations. Son rôle comprend l’analyse des risques, la réalisation d’audits de sécurité et l’élaboration de plans d’urgence..</p>
+      </div>
+      <div class="tip">
+          <h3>SURVEILLANCE</h3>
+          <p>Rôle indispensable des agents dans la surveillance moderne. compétences clés, intégration technologique, cadre légal et défis futurs de la sécurité humaine.</p>
+    </div>
+    <div class="tip">
+          <h3>AGENT RONDIER</h3>
+          <p>Un rondier intervenant est un agent de sécurité dont la mission consiste à effectuer des patrouilles en véhicule afin de prévenir les risques et les malveillances.</p>
+  </section>
+
+  <!-- Section Informations et Actualités -->
+  <section id="infos" class="information">
+    <div class="container">
+      <h2>Actualités & Informations</h2>
+      <article class="news">
+        <h3>Conseils pratiques de sécurité</h3>
+        <p>La sécurité personnelle, c’est un peu comme une bonne paire de chaussure : ça doit être confortable, <br>
+          mais surtout, ça doit bien tenir le coup ! Dans notre quotidien mouvementé, il est crucial de rester sur nos gardes 
+          et d’adopter des réflexes qui nous assurent de ne pas nous retrouver dans des pétrins.<br> 
+          Quand on parle de safety, on pense souvent à de gros mots comme « sécurité nationale » ou « protection des données ». Mais au quotidien, c’est vraiment des petites actions simples qui font toute la différence. Dans cet article, on va parler des astuces et des habitudes à adopter pour se protéger efficacement dans la vie de tous les jours. Rester conscient de son environnement, gérer ses équipements numériques, et créer un espace de vie sûr sont des clés essentielles.</p>
+      </article>
+      <article class="news">
+        <h3>Mise à jour: Sécurité en Ligne</h3>
+        <p>Les experts conseillent de changer vos mots de passe régulièrement et d'utiliser des outils de cybersécurité pour protéger vos données personnelles.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- Section Contact -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2>Contactez-nous</h2>
+      <form action="#" method="post">
+        <input type="text" name="nom" placeholder="Votre nom" required>
+        <input type="email" name="email" placeholder="Votre email" required>
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Pied de Page -->
+  <footer>
+    <div class="container">
+      <p>&copy; Sarl au capital de 15 000 000 FCFA - N°RCCM-CI-ABJ-03-2022-B13-07317-N°CC:2243258 R
+N° Agrément: 016/MIS/CAB du 25 JAN 2024 - N°COMPTE BANCAIRE:25121800 A070093601
+Siège social: Bingerville, Cité Marina, non loin de la Pharmacie Marina- BP Bingerville 
+Tel: 27 24 36 22 08 - 27 24 36 22 09 - 27 24 36 22 10 - Cel: 07 05 82 86 95
+Email: ss.securiteprivee@gmail.com - succursale de Sécurit sécurité privée
+Rue Cantelaudette 333100 Lormont France RCS BORDEAUX
+N°Agrément: 093-2025-12-28-20200769307 / agrément incendie: 093-2025-12-28-20200769307</p>
+  </footer>
+</body>
+</html>
