@@ -1,103 +1,319 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <style>
-        header {
-  background-color: #ff910090;
-  padding: 20px 0;
-}
+<style>
+    /* Réinitialisation */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background: #fff;
+      color: #333;
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
 
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  color: #fff20051;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-}
-
-nav ul li {
-  margin-left: 20px;
-}
-
-nav ul li a {
-  color: #eee;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-nav ul li a:hover {
-  color: #ffcc00;
-}
-
-/* Section Hero */
-.hero {
-  background: url('hero-bg.jpg') no-repeat center center/cover, linear-gradient(rgba(229, 173, 3, 0.5), rgba(0,0,0,0.5));
-  height: 80vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 0 20px;
-}
-
-.hero-content h1 {
-  font-size: 3em;
-  margin-bottom: 20px;
-}
-
-.hero-content p {
-  font-size: 1.2em;
-  margin-bottom: 20px;
-}
-
-.btn {
-  background-color: #ffcc00;
-  color: #f8f8f8;
-  padding: 10px 20px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
-  border-radius: 4px;
-}
-
-.btn:hover {
-  background-color: #e6b800;
-}
-
-/* Section Services */
-.services {
-  padding: 60px 0;
-  background-color: #000000;
-}
-
-.services h2 {
-  text-align: center;
-  margin-bottom: 40px;
-  font-size: 2.5em;
-}
-
-.service-cards {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.card {
-  background-color: #ff8800;
+    a {
+      text-decoration: none;
+    }
+    
+    /* Variables CSS */
+    :root {
+      --primary: #1a1a1a;       /* Pour la typographie et le background du header */
+      --secondary: #ffcc00;     /* Pour les boutons et éléments d'accent */
+      --accent: #e60000;        /* Autre couleur d'accentuation */
+      --white: #ffffff;
+      --dark-overlay: rgba(0, 0, 0, 0.5);
+    }
+    
+    /* Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: var(--primary);
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    }
+    .nav-container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav-logo img {
+      height: 50px;
+    }
+    nav ul {
+      list-style: none;
+      display: flex;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      color: var(--white);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    nav ul li a:hover {
+      color: var(--secondary);
+    }
+    
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      width: 100%;
+      background-image: url("image/hero-security.jpg.jpeg");
+      position: relative;
+      background-repeat: no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      margin-top: 70px; /* Pour compenser le header fixe */
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: var(--dark-overlay);
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      color: var(--white);
+      animation: fadeIn 2s ease-in;
+    }
+    .hero-content h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: slideIn 2s ease-in;
+    }
+    .hero-content p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      animation: fadeIn 2s ease-in;
+    }
+    .hero-content a.btn {
+      background: var(--secondary);
+      color: var(--primary);
+      padding: 15px 30px;
+      border-radius: 4px;
+      font-weight: 700;
+      text-transform: uppercase;
+      transition: background 0.4s;
+      animation: bounceIn 2s ease;
+    }
+    .hero-content a.btn:hover {
+      background: var(--accent);
+    }
+    
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 2; }
+    }
+    @keyframes slideIn {
+      from { transform: translateY(-50px); opacity: 0; }
+      to { transform: translateY(0); opacity: 1; }
+    }
+    @keyframes bounceIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      60% { transform: scale(1.1); opacity: 1; }
+      80% { transform: scale(0.9); }
+      100% { transform: scale(1); }
+    }
+    
+    /* Main Content */
+    main {
+      width: 90%;
+      max-width: 1200px;
+      margin: 40px auto;
+    }
+    section {
+      padding: 60px 20px;
+      margin-bottom: 40px;
+      background-color: #ffffff7f;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    section h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 20px;
+      border-bottom: 3px solid var(--secondary);
+      display: inline-block;
+      padding-bottom: 5px;
+    }
+    section p {
+      font-size: 1rem;
+      max-width: 800px;
+      margin: 20px auto;
+      text-align: justify;
+    }
+    
+    /* About Section avec image en arrière-plan */
+    .about-section {
+      position: relative;
+      background-color: #333;
+      color: var(--white);
+      padding: 80px 20px;
+    }
+    .about-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.6);
+      z-index: 1;
+    }
+    .about-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: auto;
+      text-align: center;
+    }
+    .about-content h2 {
+      color: var(--secondary);
+    }
+    .about-content p {
+      font-size: 1.2rem;
+    }
+    
+    /* Services Section */
+    .services-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .service-card {
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 20px;
+      flex: 1 1 280px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-10px);
+    }
+    .service-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.5rem;
+      color: var(--primary);
+      margin-bottom: 10px;
+    }
+    .service-card p {
+      font-size: 0.95rem;
+    }
+    
+    /* Testimonials Section */
+    .testimonials {
+      background: var(--primary);
+      color: var(--white);
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .testimonials h2 {
+      color: var(--secondary);
+    }
+    .testimonial {
+      margin: 30px 0;
+      font-style: italic;
+    }
+    
+    /* Contact Section */
+    .contact {
+      padding: 60px 20px;
+    }
+    .contact form {
+      max-width: 600px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .contact input,
+    .contact textarea {
+      padding: 12px;
+      border: 1px solid #000000;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .contact input:focus,
+    .contact textarea:focus {
+      outline: none;
+      border-color: var(--primary);
+    }
+    .contact button {
+      background: var(--primary);
+      color: var(--white);
+      border: none;
+      padding: 12px;
+      border-radius: 4px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .contact button:hover {
+      background: var(--secondary);
+      color: var(--primary);
+    }
+    
+    /* Footer */
+    footer {
+      background: var(--primary);
+      color: var(--white);
+      text-align: center;
+      padding: 20px 0;
+      font-size: 0.9rem;
+    }
+    
+    /* Responsive Adjustments */
+    @media screen and (max-width: 768px) {
+      .hero-content h1 {
+        font-size: 2.5rem;
+      }
+      .hero-content p {
+        font-size: 1.2rem;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+  
+    .card {
+  background-color: #ff8800e0;
   flex: 1 1 30%;
   margin: 10px;
   padding: 20px;
   border-radius: 8px;
-  transition: transform 0.3s ease;
+  transition: transform 0.5s ease;
 }
 
 .card:hover {
@@ -141,7 +357,7 @@ nav ul li a:hover {
   <!-- Section Hero -->
   <section id="home" class="hero">
     <div class="hero-content">
-      <h1><strong>Protection, Sécurité Privée 24h/24, 7jrs/7 et Sécurité Incendie</strong></h1>
+      <h1><strong>SEA SAMUEL SECURITE, Protection, Sécurité Privée 24h/24, 7jrs/7 et Sécurité Incendie</strong></h1>
       <p>Notre Expertise, Votre Satisfaction</p>
       <a href="#contact" class="btn">Contactez-nous</a>
     </div>
@@ -160,7 +376,7 @@ nav ul li a:hover {
           <h3><a href="incendie.html"target="_blank">SEA SAMUEL PREVENTION INCENDIE ASSISTANCE SECOURS (SSSPIAS) </a></h3>
           <p>Le gardien vigilant de la sécurité au sein des entreprises. Il s’agit d’une équipe dédiée à la prévention, à la préparation et à la réaction en cas d’incendie.</p>
         </div>
-                    </section>
+           </section>
 
   <!-- Section Contact -->
   <section id="contact" class="contact">
@@ -197,7 +413,13 @@ nav ul li a:hover {
 /* Section Contact */
 .contact {
   padding: 60px 0;
-  background-color: #1f1f1f;
+  background-image: url(image/agent-de-securite-de-magasin.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 20px;
 }
 
 .contact h2 {
@@ -225,7 +447,7 @@ nav ul li a:hover {
   padding: 10px;
   background-color: #ffcc00;
   border: none;
-  color: #141414;
+  color: #ffffff;
   font-weight: bold;
   transition: background-color 0.3s ease;
   border-radius: 4px;
