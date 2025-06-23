@@ -54,7 +54,10 @@
     }
     /* Section Hero */
     .hero {
-      background: url('images/incendie-hero.jpg') no-repeat center center/cover;
+      background-image: url(image/okmmm.jpg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
       height: 60vh;
       display: flex;
       align-items: center;
@@ -100,7 +103,9 @@
       max-width: 100%;
       border-radius: 8px;
       margin: 20px 0;
+      
     }
+    
     /* Section FAQ / Infos complémentaires */
     .faq {
       background: #f5f5f5;
@@ -113,9 +118,13 @@
     }
     /* Section Contact */
     .contact {
-      background: #eeeeee;
+      background-image: url(image/formation.jfif);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       padding: 40px 20px;
       text-align: center;
+      
     }
     .contact h2 {
       font-size: 2em;
@@ -155,7 +164,7 @@
       padding: 15px 0;
       font-size: 0.9em;
     }
-    
+        
   </style>
 </head>
 <body>
@@ -163,6 +172,7 @@
   <header>
     <div class="container header-container">
       <h1><img src="image/SSSIP.png" alt="logo de l'entreprise" height="150" width="150"></h1>
+      <h2>SAMUEL SEA PREVENTION INCENDIE ASSISTANCE SECOURS</h2>
       <nav>
         <ul>
           <li><a href="index.html">Accueil</a></li>
@@ -231,16 +241,16 @@
   </main>
   
   <!-- Section Contact -->
-   <section class="contact">
-    <section id="contact" class="advice">
-    <div class="container">
-      <h2>Contactez-Nous</h2>
-      <p>Pour toute demande d'information ou une intervention, n'hésitez pas à nous contacter via le formulaire ci-dessous :</p>
-      <form action="#" method="post">
-        <input type="text" name="nom" placeholder="Votre nom" required>
-        <input type="email" name="email" placeholder="Votre email" required>
-        <textarea name="message" placeholder="Votre message" rows="5" required></textarea>
-        <button type="submit">Envoyer</button>
+   <section id="contact" class="contact">
+  <h2>Contactez-nous</h2>
+  <p style="text-align:center;">
+    Pour toute demande, vous pouvez nous écrire via ce formulaire :
+  </p>
+  <form onsubmit="alert('Merci ! Votre message a bien été envoyé, vous récevrez une notification via votre mail.'); return false;">
+    <input type="text" name="nom" placeholder="Votre nom" required>
+    <input type="email" name="email" placeholder="Votre email" required>
+    <textarea name="message" rows="5" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
       </form>
     </div>
   </section>
